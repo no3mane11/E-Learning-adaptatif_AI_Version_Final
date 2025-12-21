@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/elearningdb
+    username: elearning_user
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc.time_zone: UTC
+
+app:
+  jwt:
+    enabled: true
+    # MUST be long enough (>=32 chars) for HS256. Replace this in prod by a secure secret stored safely.
+    secret: veryLongAndSecureSecretKey_for_HS256_pleaseReplaceInProd_2025!
+    expiration-ms: 86400000
+
+logging:
+  level:
+    com.elearning.adaptive: DEBUG
+    org.springframework.security: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: never

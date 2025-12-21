@@ -1,0 +1,18 @@
+# ===== Spring Boot =====
+Backend/target/
+Backend/.idea/
+Backend/*.log
+Backend/.classpath
+Backend/.project
+Backend/.settings/
+
+# ===== Flutter =====
+elearningfrontv2/build/
+elearningfrontv2/.dart_tool/
+elearningfrontv2/.flutter-plugins
+elearningfrontv2/.flutter-plugins-dependencies
+elearningfrontv2/.packages
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
